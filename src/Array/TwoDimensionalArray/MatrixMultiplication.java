@@ -1,5 +1,8 @@
 package Array.TwoDimensionalArray;
-
+/*
+Matrix multiplication is only valid if the number of columns of the first matrix are equal
+to the number of rows of the second matrix
+ */
 import java.util.Scanner;
 
 public class MatrixMultiplication
@@ -39,11 +42,11 @@ public class MatrixMultiplication
         int col1 =arr[0].length;
         int row2 =arr1.length;
         int col2=arr1[0].length;
-//        if(row2!=col1)
-//        {
-//            System.out.println("Multiplication not possible");
-//            return new int[0][0];
-//        }
+        if(col1!=row2)
+        {
+            System.out.println("Multiplication not possible");
+            return new int[0][0];
+        }
         int [][] result = new int[row1][col2];
 
         for(int i=0;i<row1;i++)
