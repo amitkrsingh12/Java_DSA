@@ -6,7 +6,7 @@ public class StudentUse {
         Student s1 = new Student("Amit",10);
 
         s1.print();
-        Student s2 = new Student();
+        Student s2 = new Student("Pratiuk",20);
         s2.print();
     }
 }
