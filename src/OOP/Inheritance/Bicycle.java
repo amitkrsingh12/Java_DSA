@@ -1,2 +1,6 @@
-package OOP.Inheritance;public class Bicycle {
+package OOP.Inheritance;
+
+public class Bicycle extends Vehicle
+{
+
 }
