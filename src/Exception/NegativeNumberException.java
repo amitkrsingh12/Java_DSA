@@ -1,2 +1,4 @@
-package Exception;public class NegativeNumberException {
+package Exception;
+
+public class NegativeNumberException extends Throwable {
 }
