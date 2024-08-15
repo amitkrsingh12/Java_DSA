@@ -1,2 +1,6 @@
-package LinkedList;public class SinglyLinkedList {
+package LinkedList;
+
+public class SinglyLinkedList
+{
+
 }

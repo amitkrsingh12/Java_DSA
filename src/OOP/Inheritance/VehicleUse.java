@@ -8,10 +8,10 @@ public class VehicleUse {
         v.maxSpeed=80;
         v.print();
 
-        Car c = new Car();
-        c.setColor("Black");
-        c.maxSpeed=100;
-        c.numDoors=4;
+//        Car c = new Car();
+//        c.setColor("Black");
+//        c.maxSpeed=100;
+//        c.numDoors=4;
         /*
         We have two print function. 1 in Parent Class(Vehicle) and the other in  Child Class(Car)
         So the below c.print() check first in car class, and implements it.
@@ -20,6 +20,11 @@ public class VehicleUse {
         subclass has the same name,  return type, and parameters as a method in its superclass the
         method in the subclass overrides the one in the superclass.
          */
+        Car c = new Car();
+        c.setColor("Black");
+        c.maxSpeed=50;
+        c.numDoors=4;
+        c.printMaxSpeed();
         c.print();
 
     }

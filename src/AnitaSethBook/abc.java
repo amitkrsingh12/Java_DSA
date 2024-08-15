@@ -1,2 +1,4 @@
-package AnitaSethBook;public class abc {
+package AnitaSethBook;
+
+public class abc {
 }

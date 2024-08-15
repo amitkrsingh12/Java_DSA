@@ -1,2 +1,4 @@
-package OOP;public class main {
+package OOP;
+
+public class main {
 }
