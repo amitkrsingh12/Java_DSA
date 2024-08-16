@@ -45,6 +45,18 @@ public class Practice {
         }
         return 1/Math.pow(2,input) + gemoetricSum(input-1);
     }
+    public static boolean isPalindrome(String str)
+    {
+        if(str.length()==0||str.length()==1)
+        {
+            return true;
+        }
+        if(str.charAt(0)!=str.charAt(str.length()-1))
+        {
+            return false;
+        }
+        return isPalindrome(str.substring(1,str.length()-1));
+    }
 
 
     public static void main(String args[])
@@ -66,10 +78,16 @@ public class Practice {
 //        int p =in.nextInt();
 //        System.out.println("Minimum no of steps required is : "+staircase(p));
 
+//        System.out.println("------------------------------------------------------------");
+//        System.out.println("enter a number whose geometric sum you want ? ");
+//        int q =in.nextInt();
+//        System.out.println("Geometric sum : " +gemoetricSum(q));
+
         System.out.println("------------------------------------------------------------");
-        System.out.println("enter a number whose geometric sum you want ? ");
-        int q =in.nextInt();
-        System.out.println("Geometric sum : " +gemoetricSum(q));
+        System.out.println("Enter string whose palindrome you want to search ?");
+        String str =in.nextLine();
+        System.out.println(isPalindrome(str));
+
 
 
 
