@@ -1,17 +1,8 @@
 package OOP.OOP3.Interace;
 
-public class Vehicle implements VehicleInterface {
-
-    @Override
-    public boolean isMotorized() {
-        return true;
-    }
-
-    @Override
-    public String getCompany() {
-        return null;
-    }
+public class Vehicle  {
+    // in above as you can see we have not implemented Vehicle Interface that is why we are getting error in  Vehicle Use @1
     void print(){
-        System.out.println(PI);
+        System.out.println("Inside Vehicle Class ");
     }
 }
