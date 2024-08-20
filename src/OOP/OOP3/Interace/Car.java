@@ -5,11 +5,6 @@ public class Car extends Vehicle implements CarInterface,VehicleInterface{
 
 
     @Override
-    public int numgears() {
-        return 5;
-    }
-
-    @Override
     public boolean isMotorized() {
         return true;
     }
@@ -19,7 +14,14 @@ public class Car extends Vehicle implements CarInterface,VehicleInterface{
         return null;
     }
 
+
+
     void print(){
         System.out.println(PI);
+    }
+
+    @Override
+    public int numgears() {
+        return 5;
     }
 }
