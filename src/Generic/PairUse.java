@@ -1,2 +1,9 @@
-package Generic;public class PairUse {
+package Generic;
+
+public class PairUse{
+    public static void main(String args[])
+    {
+        
+    }
+
 }
