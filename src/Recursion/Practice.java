@@ -85,6 +85,18 @@ public class Practice {
         return false;
     }
 
+    public static int convertStringToInt(String input){
+        // Write your code here
+        if(input.length()==1)
+            return input.charAt(0)-'0';
+        int ans=convertStringToInt(input.substring(1));
+        int x= input.charAt(0)-'0';
+        x= x*(int)Math.pow(10,input.length()-1)+ans;
+        return x;
+
+    }
+
+
 
     public static void main(String args[])
     {
@@ -115,10 +127,15 @@ public class Practice {
 //        String str =in.nextLine();
 //        System.out.println(isPalindrome(str));
 
+//        System.out.println("------------------------------------------------------------");
+//        System.out.println("Enter ab combination ?");
+//        String str1 =in.nextLine();
+//        System.out.println(checkAB(str1));
+
         System.out.println("------------------------------------------------------------");
-        System.out.println("Enter ab combination ?");
-        String str1 =in.nextLine();
-        System.out.println(checkAB(str1));
+        System.out.println("Enter string to convert to int");
+        String str2=in.nextLine();
+        System.out.println(convertStringToInt(str2));
 
 
 
