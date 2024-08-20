@@ -1,6 +1,6 @@
 package OOP.OOP3.Interace;
 
-public class vehicle implements VehicleInterface {
+public class Vehicle implements VehicleInterface {
 
     @Override
     public boolean isMotorized() {
@@ -10,5 +10,8 @@ public class vehicle implements VehicleInterface {
     @Override
     public String getCompany() {
         return null;
+    }
+    void print(){
+        System.out.println(PI);
     }
 }
