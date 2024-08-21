@@ -12,11 +12,16 @@ public class ArrayListDemo
         arr.add(30);
 
         arr.add(1,80);
-        arr.remove(1);
+        //arr.remove(1);
         System.out.println("Array List element at 1 " +arr.get(1));
         System.out.println("Array List Elements are : ");
         for(int i=0;i<arr.size();i++){
             System.out.print(arr.get(i)+ " ");
+        }
+        System.out.println();
+        //Enhanced for loop-for each loop
+        for(int i: arr){
+            System.out.println(i);
         }
     }
 }
