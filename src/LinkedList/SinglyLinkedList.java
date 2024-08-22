@@ -12,9 +12,29 @@ public class SinglyLinkedList
         n3.next=n4;
         return  n1;
     }
+    public static void printLinkedLIst(Node<Integer> head)
+    {
+        Node<Integer> temp =head;
+        System.out.print (" LinkedList :- ");
+        while(temp!=null)
+        {
+            System.out.print(temp.data+ " ");
+            temp =temp.next;
+        }
+        System.out.println();
+        System.out.println(temp);
+
+    }
+
+
+
     public static void main(String args[]){
         Node <Integer> head = createLinkdedList();
-        System.out.println(head);
+        printLinkedLIst(head);
+    //    System.out.println(head);
+
+
+
 //        Node<Integer> n1= new Node<>(10);
 //        System.out.println(n1.data);
 //        System.out.println(n1.next);
