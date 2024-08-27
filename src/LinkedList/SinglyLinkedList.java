@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.LinkedList;
+
 public class SinglyLinkedList
 {
     public static Node<Integer> createLinkdedList(){
@@ -25,13 +27,79 @@ public class SinglyLinkedList
         System.out.println(temp);
 
     }
+    public static void increment(Node <Integer> head){
+        Node <Integer> temp =head;
+        while(temp!=null)
+        {
+            temp.data++;
+            temp = temp.next;
+
+        }
+    }
+    public static Node<Integer> insert(Node<Integer> head,int elem,int pos){
+        Node<Integer> nodetobeInserted = new Node<>(elem);
+        if(pos==0){
+            nodetobeInserted.next=head;
+            return nodetobeInserted;
+        }else{
+            int count =0;
+            Node<Integer> prev =head;
+            while(count<pos -1 && prev!=null){
+                count++;
+                prev=prev.next;
+            }
+            if(prev.next !=null){
+                nodetobeInserted.next =prev.next;
+                prev.next = nodetobeInserted;
+            }
+            return  head;
+        }
+    }
+    public static Node<Integer> deleteNode(Node<Integer> head,int pos){
+        if(head==null){
+            return head;
+        }
+        if(pos==0){
+            return head.next;
+        }
+        int count=0;
+        Node<Integer> currHead =head;
+        while (currHead != null && count < pos - 1) {
+
+            currHead =currHead.next;
+            count++;
+        }
+        if(currHead==null||currHead.next==null){
+            return head;
+        }
+        currHead.next = currHead.next.next;
+        return head;
+
+    }
+    public static void printR(Node<Integer> head)
+    {
+        if(head==null)
+        {
+            return;
+        }
+        System.out.print(head.data+ " ");
+        printR(head.next);
+    }
+
+
 
 
 
     public static void main(String args[]){
         Node <Integer> head = createLinkdedList();
-        printLinkedLIst(head);
-    //    System.out.println(head);
+        printR(head);
+
+//        increment(head);
+//        insert(head,90,3);
+//        printLinkedLIst(head);
+//        deleteNode(head,3);
+//        printLinkedLIst(head);
+//        System.out.println(head);
 
 
 
